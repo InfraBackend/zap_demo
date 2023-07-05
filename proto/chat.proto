@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package="/";
+
+// 定义 message
+message ChatMessage {
+ string body = 1;
+}
+
+// 定义 service
+service ChatService {
+ rpc SayHello(ChatMessage ) returns (ChatMessage ) {}
+}
